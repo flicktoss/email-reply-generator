@@ -1,0 +1,80 @@
+/* Base button style matching Gmail's send button */
+.ai-reply-button {
+  background-color: #1a73e8;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  user-select: none;
+  margin-right: 8px;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect */
+.ai-reply-button:hover {
+  background-color: #1669c1;
+}
+
+/* Click feedback */
+.ai-reply-button:active {
+  transform: scale(0.97);
+}
+
+/* Disabled state while generating */
+.ai-reply-button[disabled] {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.spinner {
+  border: 2px solid #fff;
+  border-top: 2px solid #1a73e8;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.mailgenie-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #323232;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+  font-size: 14px;
+}
+
+.ai-reply-button {
+  background-color: #1a73e8;
+  color: white;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ai-reply-button:hover {
+  background-color: #0f5dc9;
+}

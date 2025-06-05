@@ -1,31 +1,36 @@
 {
-    "name": "MailGenie",
-    "description": "AI-Powered Smart Reply System",
-    "version": "1.0",
-    "manifest_version": 3,
-    "permissions": [
-            "storage",
-            "activeTab"
-        ],
-    "host_permissions": [
-        "http://localhost:8080/*",
-        "*://mail.google.com/*"
-    ],
-    "content_scripts": [
-        {
-        "js": ["content.js"],
-        "matches": ["*://mail.google.com/*"],
-        "css": ["content.css"],
-        "run_at": "document_end"
-        }
-    ],
-    "web_accessible_resources": [
-        {
-            "resources": [ "icons/*" ],
-            "matches": ["*://mail.google.com/*"]
-        }
-    ],
-    "action": {
-        "default_title": "Email Writer Assistant"
+  "name": "MailGenie",
+  "description": "AI-Powered Smart Reply System",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["http://localhost:8080/*", "*://mail.google.com/*"],
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["*://mail.google.com/*"],
+      "css": ["content.css"],
+      "run_at": "document_end"
     }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*"],
+      "matches": ["*://mail.google.com/*"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icons/image.png",
+      "32": "icons/image.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "MailGenie"
+  },
+  "icons": {
+    "16": "icons/image.png",
+    "32": "icons/image.png",
+    "48": "icons/image.png",
+    "128": "icons/image.png"
+  }
 }
